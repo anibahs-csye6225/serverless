@@ -37,9 +37,9 @@ functions.cloudEvent('sendEmail', async cloudEvent => {
         const mailOptions = {
             from: "user_verification@anibahscsye6225.me",
             to: user.account.username,
-            subject: 'Verify your new account!',
+            subject: 'CSYE6225 Verify your webapp account',
             text: 'Visit this http://anibahscsye6225.me:8080/v1/user/verifyEmail/' + user.account.username + "/" + token,
-            html: '<a href="http://anibahscsye6225.me:8080/v1/user/verifyEmail/' + user.account.username + "/" + token + '"><H2>Click here to verify your account!</H2></a>'
+            html: '<a href="http://anibahscsye6225.me:8080/v1/user/verifyEmail/' + user.account.username + "/" + token + '"><H2>Click here to verify your account.</H2></a>'
         };
         try {
             const selfUser = await User.findOne({
