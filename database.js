@@ -79,12 +79,15 @@ async function initializeDatabase() {
         await User.sync()
             .then((value) => {
                 logger.info("Database connection established!");
+                console.log("Database connection established!");
             })
             .catch((err) => {
                 logger.error("Database connection Failed: ", err);
+                console.error("Database connection Failed: ", err);
             })
     } catch (error) {
         logger.error('Unable to connect to the database:', error);
+        console.error("Database connection established!");
         process.exit(1);
     }
 }
