@@ -17,7 +17,7 @@ const logger = winston.createLogger({
  ]
 });
 
-logger.info("Start logging")
+console.log("Start logging")
 module.exports = logger;
 
 
