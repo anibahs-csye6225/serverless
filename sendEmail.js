@@ -38,8 +38,8 @@ functions.cloudEvent('sendEmail', async cloudEvent => {
             from: "user_verification@anibahscsye6225.me",
             to: user.account.username,
             subject: 'CSYE6225 Verify your webapp account',
-            text: 'Visit this http://anibahscsye6225.me/v1/user/verifyEmail/' + user.account.username + "/" + token,
-            html: '<a href="http://anibahscsye6225.me/v1/user/verifyEmail/' + user.account.username + "/" + token + '"><H2>Click here to verify your account.</H2></a>'
+            text: 'Visit this https://anibahscsye6225.me/v1/user/verifyEmail/' + user.account.username + "/" + token,
+            html: '<a href="https://anibahscsye6225.me/v1/user/verifyEmail/' + user.account.username + "/" + token + '"><H2>Click here to verify your account.</H2></a>'
         };
         try {
             const selfUser = await User.findOne({
